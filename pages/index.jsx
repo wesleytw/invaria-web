@@ -20,8 +20,8 @@ function App() {
 
   return (
     <div className=" min-w-full max-w-full relative overscroll-none overflow-hidden h-full bg-gradient-radial from-[#55465D] to-black">
-      {/* <ScrollToTop /> */}
-      {/* <Navbar headerBackground={headerBackground} /> */}
+      <ScrollToTop />
+      <Navbar headerBackground={headerBackground} />
       {/* <ModalStory /> */}
       <div className="relative mt-[88px] ">
         <div className="w-full h-screen -mb-[88px] flex flex-col justify-center items-center ">
