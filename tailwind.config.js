@@ -5,7 +5,44 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    container: {
+      center: true,
+    },
+    extend: {
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
+      colors: {
+        'invar-dark': '#18141B',
+        'invar-main-purple': '#44334C',
+        'invar-light-grey': '#B4B7C0',
+        'invar-purple': '#752EE5',
+        'invar-grey': '#8F97A3',
+        'invar-light-purple': '#E3D5FA',
+        'invar-disabled': '#B4B7C0',
+        'invar-validation': '#FFC25F',
+        'invar-error': '#F04679',
+        'invar-success': '#00DEAE',
+      },
+      spacing: {
+        '960': '240rem',
+      },
+      keyframes: {
+        'fade-in-down': {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(-10px)'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)'
+          },
+        }
+      },
+      animation: {
+        'fade-in-down': 'fade-in-down 1s ease-out'
+      }
+    },
   },
   plugins: [require("daisyui")],
   daisyui: {
@@ -15,16 +52,13 @@ module.exports = {
         mytheme: {
           "primary": "#44334C",
           "secondary": "#E3D5FA",
-          "accent": "#44334C",
-          "neutral": "#e4e7eb",
+          "accent": "#B4B7C0",
+          "neutral": "#808694",
           "base-100": "#EAE5EB",
-          // "info": "#0057ff",
-          "info": "#d2fce2",
+          "info": "#2F125C",
           "success": "#15935A",
           "warning": "#F0AB0A",
           "error": "#fdd7e4",
-          // "error": "#3b82f680",
-          
         },
       }
     ]

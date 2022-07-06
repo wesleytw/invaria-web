@@ -1,8 +1,5 @@
 import Link from 'next/link';
 
-import twitter from '../../src/assets/twitter.svg';
-import discord from '../../src/assets/discord.svg';
-
 export const Twitter = () => (
   <Link className="text-invar-purple hover:underline z-20"
     href='#'
@@ -11,7 +8,7 @@ export const Twitter = () => (
       e.preventDefault();
     }}
   >
-    <img className="rounded w-10" src={twitter} alt="Logo" />
+    <img className="rounded w-10" src="/twitter.svg" alt="Logo" />
   </Link>
 );
 
@@ -23,7 +20,7 @@ export const Discord = () => (
       e.preventDefault();
     }}
   >
-    <img className="rounded w-10" src={discord} alt="Logo" />
+    <img className="rounded w-10" src="/discord.svg" alt="Logo" />
   </Link>
 );
 

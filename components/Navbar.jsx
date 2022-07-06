@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 // import { ReactComponent as Logo } from '../src/assets/logo_white.svg';
-import { ic_language, ic_close, ic_menu, ic_back, ic_metamask, ic_walletconnect, ic_eth, ic_usdc } from '../src/assets/icons/';
+// import { ic_language, ic_close, ic_menu, ic_back, ic_metamask, ic_walletconnect, ic_eth, ic_usdc } from '../public/icons';
 import { ModalWallet } from './'
 import { ethers } from 'ethers'
 import { shortenAddress } from '../src/utils/shortenAddress'
@@ -71,11 +71,11 @@ const Navbar = ({ headerBackground }) => {
           <div className="navbar-end md:hidden">
             {!toggleMenu &&
               <button className=" absolute top-[24px] right-[27px]" onClick={() => setToggleMenu(true)}>
-                <img className="h-[20px] w-[20px]" src={ic_menu} alt="" />
+                <img className="h-[20px] w-[20px]" src="/icons/ic_menu" alt="" />
               </button>}
             {toggleMenu &&
               <button className=" absolute top-[24px] right-[27px]" onClick={() => handleToggle()}>
-                <img className="h-[20px] w-[20px]" src={ic_close} alt="" />
+                {/* <img className="h-[20px] w-[20px]" src={ic_close} alt="" /> */}
               </button>}
           </div>
           <div className="navbar-end hidden md:flex flex-row">
@@ -94,7 +94,7 @@ const Navbar = ({ headerBackground }) => {
             )
             }
             <button className="btn btn-sm btn-outline rounded h-[40px] w-[40px] my-[24px] mr-[24px] px-[4px] py-[4px] font-semibold text-sm text-white border-[#44334C] normal-case hover:border-none hover:bg-primary ">
-              <img className="h-[20px] w-[20px]" src={ic_language} alt="" />
+              {/* <img className="h-[20px] w-[20px]" src={ic_language} alt="" /> */}
             </button>
           </div>
         </div>
@@ -118,7 +118,7 @@ const Navbar = ({ headerBackground }) => {
               <div className=" border-b border-primary mt-3 w-[324px]"></div>
               <div className=" w-full mt-[14px] flex justify-between items-center ">
                 <div className=" flex justify-center items-center text-white font-semibold">
-                  <img className="h-[32px] w-[32px] mr-[12px]" src={ic_eth} alt="" />
+                  {/* <img className="h-[32px] w-[32px] mr-[12px]" src={ic_eth} alt="" /> */}
                   <p>ETH</p>
                 </div>
                 {ethBalance && <div className=" flex flex-col justify-center items-end text-white font-semibold">
@@ -129,7 +129,7 @@ const Navbar = ({ headerBackground }) => {
               </div>
               <div className=" w-full mt-[14px] flex justify-between items-center ">
                 <div className=" flex justify-center items-center text-white font-semibold">
-                  <img className="h-[32px] w-[32px] mr-[12px]" src={ic_usdc} alt="" />
+                  {/* <img className="h-[32px] w-[32px] mr-[12px]" src={ic_usdc} alt="" /> */}
                   <p>USDC</p>
                 </div>
                 <div className=" flex flex-col justify-center items-end text-white font-semibold">
@@ -149,16 +149,16 @@ const Navbar = ({ headerBackground }) => {
         <>
           <div className=" fixed top-[60px] z-40 w-full h-screen py-[34px] px-[16px] flex flex-col justify-start items-start md:hidden text-white bg-gradient-to-b from-primary to-[#1E1722]">
             <div className="flex justify-start items-center mb-[32px]" onClick={() => setToggleWallet(false)}>
-              <img className="w-[24px] h-[24px]" src={ic_back} alt="" />
+              {/* <img className="w-[24px] h-[24px]" src={ic_back} alt="" /> */}
               <h3 className="text-base font-semibold text-white ml-[15px]">Back</h3>
             </div>
             <h3 className="text-2xl font-semibold text-white mb-[22px]">Connect Wallet</h3>
             <button className="btn btn-primary relative w-full h-[56px] rounded flex justify-center items-center border-none normal-case" onClick={connectWithMetamask}>
-              <img className="absolute top-[13px] left-4 h-[30px] w-[30px]" src={ic_metamask} alt="" />
+              {/* <img className="absolute top-[13px] left-4 h-[30px] w-[30px]" src={ic_metamask} alt="" /> */}
               <p className=" font-semibold text-accent">MetaMask</p>
             </button>
             <button className="btn btn-primary mt-3 relative w-full h-[56px] rounded flex justify-center items-center border-none normal-case" onClick={connectWithWalletConnect}>
-              <img className="absolute top-[13px] left-4 h-[30px] w-[30px]" src={ic_walletconnect} alt="" />
+              {/* <img className="absolute top-[13px] left-4 h-[30px] w-[30px]" src={ic_walletconnect} alt="" /> */}
               <p className=" font-semibold text-accent">WalletConnect</p>
             </button>
           </div>

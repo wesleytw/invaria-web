@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { ic_walletconnect, ic_metamask, ic_close, ic_eth, ic_usdc } from '../src/assets/icons';
+import { ic_walletconnect, ic_metamask, ic_close, ic_eth, ic_usdc } from '../public/icons';
 import { ethers } from 'ethers'
 import {
   useMetamask, useWalletConnect, useCoinbaseWallet,

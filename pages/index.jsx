@@ -1,20 +1,20 @@
 // FIXME: path alias
 import { useEffect, useState } from "react";
 import { Twitter, Discord } from '../components/icons/Link'
-import { bg_phase0, bg_02, bg_03, bg_04, bg_05, } from '../src/assets/bg';
-import cloud1 from '../src/assets/cloud1.png';
-import cloud2 from '../src/assets/cloud2.png';
+// import { bg_phase0, bg_02, bg_03, bg_04, bg_05, } from '../src/assets/bg';
+// import cloud1 from '../src/assets/cloud1.png';
+// import cloud2 from '../src/assets/cloud2.png';
 import { ScrollToTop, QA, Footer, Navbar, ModalStory } from '../components';
 import { tutorialsList, faqList } from "../src/constants";
 
 function App() {
-  const [headerBackground, setHeaderBackground] = useState(false);
+  const [headerBackground, setHeaderBackground] = useState(true);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      window.addEventListener("scroll", () =>
-        setHeaderBackground(window.pageYOffset > 10)
-      );
+      // window.addEventListener("scroll", () =>
+      //   setHeaderBackground(window.pageYOffset > 10)
+      // );
     }
   }, []);
 
@@ -30,14 +30,14 @@ function App() {
           <button className='btn w-[183px] md:w-max bg-[#ffffff6c] btnShadow px-6 py-3 mt-4 md:mt-0 text-sm text-info rounded md:absolute top-[280px] right-1/4 normal-case border-none z-20 ' >
             FAQ & Tutorials</button>
         </div>
-        <img className="w-full max-h-full absolute top-0 h-screen object-cover overflow-hidden z-0" src={bg_phase0} alt="bg_phase0" />
+        <img className="w-full max-h-full absolute top-0 h-screen object-cover overflow-hidden z-0" src='/bg/bg_phase0.png' alt="bg_phase0" />
         <div className="hidden md:flex flex-col max-w-0 ">
-          <img className=" cloud1 absolute top-56 md:top-32 -left-16 md:left-8 right-0 w-[700px] md:w-[700px] object-contain z-10" src={cloud1} alt="cloud1" />
-          <img className=" cloud2 absolute top-96 md:top-64 left-[200px] md:left-[600px] right-0 w-[350px] md:w-[600px] object-contain z-10" src={cloud2} alt="cloud2" />
+          {/* <img className=" cloud1 absolute top-56 md:top-32 -left-16 md:left-8 right-0 w-[700px] md:w-[700px] object-contain z-10" src={cloud1} alt="cloud1" />
+          <img className=" cloud2 absolute top-96 md:top-64 left-[200px] md:left-[600px] right-0 w-[350px] md:w-[600px] object-contain z-10" src={cloud2} alt="cloud2" /> */}
         </div>
         <div className=" flex md:hidden ">
-          <img className=" absolute top-56 md:top-32 -left-16 md:left-8 right-0 w-[700px] md:w-[700px] object-contain z-10" src={cloud1} alt="cloud1" />
-          <img className=" absolute top-96 md:top-64 left-[200px] md:left-[600px] right-0 w-[350px] md:w-[600px] object-contain z-10" src={cloud2} alt="cloud2" />
+          {/* <img className=" absolute top-56 md:top-32 -left-16 md:left-8 right-0 w-[700px] md:w-[700px] object-contain z-10" src={cloud1} alt="cloud1" />
+          <img className=" absolute top-96 md:top-64 left-[200px] md:left-[600px] right-0 w-[350px] md:w-[600px] object-contain z-10" src={cloud2} alt="cloud2" /> */}
         </div>
         <div className='hidden absolute top-0 left-[24px] md:flex flex-row items-start justify-start h-[592px] w-[325px] text-white indent-0.5 font-normal text-sm z-10 animate-fade-in-down'>
           <div className='flex flex-col items-center justify-center mr-3'>
@@ -103,10 +103,10 @@ function App() {
             </div>
           </div>
         </div>
-        <img className=" hidden md:flex absolute top-[1032px] -left-[136px] w-[600px] object-contain z-0" src={bg_02} alt="" />
+        {/* <img className=" hidden md:flex absolute top-[1032px] -left-[136px] w-[600px] object-contain z-0" src={bg_02} alt="" />
         <img className=" hidden md:flex absolute top-[536px] -right-[60px] w-[450px] object-contain z-0" src={bg_03} alt="" />
         <img className=" hidden md:flex absolute bottom-[135.17px] left-[230px] w-[450px] object-contain z-0" src={bg_04} alt="" />
-        <img className=" hidden md:flex absolute bottom-[84.79px] -left-[136px] w-[450px] object-contain z-0" src={bg_05} alt="" />
+        <img className=" hidden md:flex absolute bottom-[84.79px] -left-[136px] w-[450px] object-contain z-0" src={bg_05} alt="" /> */}
       </div>
 
       <Footer />
