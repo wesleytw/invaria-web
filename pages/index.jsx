@@ -20,9 +20,9 @@ function App() {
 
   return (
     <div className=" min-w-full max-w-full relative overscroll-none overflow-hidden h-full bg-gradient-radial from-[#55465D] to-black">
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
       {/* <Navbar headerBackground={headerBackground} /> */}
-      <ModalStory />
+      {/* <ModalStory /> */}
       <div className="relative mt-[88px] ">
         <div className="w-full h-screen -mb-[88px] flex flex-col justify-center items-center ">
           <label htmlFor="my-modal-1" className="btn modal-button w-[183px] md:w-min bg-[#ffffffc7] btnShadow px-6 py-3 text-sm text-info rounded -mt-[88px] md:absolute top-[408px] left-[245px] z-20 normal-case border-none">
