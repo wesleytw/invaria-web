@@ -104,8 +104,8 @@ const Terms = () => {
           </p>
           <br />
           <p>
-            C. InVaria 2222 is an encrypted digital asset that recognizes artworks ("artwork(s)") created by
-            InVar's artists ("artist(s)") or partners. Upon your purchase of a InVaria 2222 on this website,
+            C. InVaria 2222 is an encrypted digital asset that recognizes artworks (`&quot;`artwork(s)`&quot;`) created by
+            InVar`&apos;`s artists (`&quot;`artist(s)`&quot;`) or partners. Upon your purchase of a InVaria 2222 on this website,
             you will be granted rights to commercial use as provided in the terms of commercial use on this website.
             Except as expressly permitted in these terms, you may download the content on this website only for your personal,
             non-commercial fair use. You understand and accept that you are prohibited from any of the following activities:
@@ -119,7 +119,7 @@ const Terms = () => {
           </p>
           <p className="pl-6 -indent-4">
             3. Upon InVar marketing and promoting the service,
-            the names and designs of the goods and services related to the service (the "service marks")
+            the names and designs of the goods and services related to the service (the `&quot;`service marks`&quot;`)
             are protected by the trademark act and fair trade act of applicable jurisdictions according
             to their registered status or registered use. You may not use the service marks in any way
             without the prior written consent of InVar.
@@ -161,7 +161,7 @@ const Terms = () => {
             (iii) impersonate another person; (iv) upload, post, transmit or otherwise make available through
             the Site any content that infringes the intellectual property or proprietary rights of any party or otherwise violates
             the legal rights of others; (v) engage in, promote, or encourage illegal activity (including, without limitation,
-            money laundering); (vi) interfere with other users' use of the Site;
+            money laundering); (vi) interfere with other users`&apos;` use of the Site;
             (vii) use the Site for any unauthorized commercial purpose;
             (viii) modify, adapt, translate, or reverse engineer any portion of the Site;
             (ix) remove any copyright, trademark or other proprietary rights notices contained in or on the Site or any part of it;
@@ -253,7 +253,7 @@ const Terms = () => {
             6. You shall be responsible for any damages and losses arising from any breach of these terms and InVar shall not be liable for any damages or compensation for losses.
           </p>
           <p className="pl-6 -indent-4">
-            7. You shall be liable for all damages (including but not limited to, the litigation costs and attorneys' fees) incurred by InVar or the website from your illegal use of this website or service or breach of these terms.
+            7. You shall be liable for all damages (including but not limited to, the litigation costs and attorneys`&apos;` fees) incurred by InVar or the website from your illegal use of this website or service or breach of these terms.
           </p>
           <br />
           <p>
@@ -366,7 +366,7 @@ const Terms = () => {
             8. Indemnification
           </p>
           <p>
-            You agree to hold harmless and indemnify InVar and its subsidiaries, affiliates, officers, agents, employees, advertisers, licensors, suppliers or partners from and against any claim, liability, loss, damage (actual and consequential) of any kind or nature, suit, judgment, litigation cost, and reasonable attorneys' fees arising out of or in any way related to (i) your breach of these Terms, (ii) your misuse of the Site, or (iii) your violation of applicable laws, rules or regulations in connection with your access to or use of the Site.
+            You agree to hold harmless and indemnify InVar and its subsidiaries, affiliates, officers, agents, employees, advertisers, licensors, suppliers or partners from and against any claim, liability, loss, damage (actual and consequential) of any kind or nature, suit, judgment, litigation cost, and reasonable attorneys`&apos;` fees arising out of or in any way related to (i) your breach of these Terms, (ii) your misuse of the Site, or (iii) your violation of applicable laws, rules or regulations in connection with your access to or use of the Site.
           </p>
           <br />
           <p className="text-xl font-semibold" id="9">

@@ -7,19 +7,19 @@ const Footer = () => (
       <p className="text-invar-grey select-none">© 2022 InVaria 2222</p>
       <div className="flex flex-col-reverse sm:flex-row mt-4 sm:mt-0 justify-center">
         <div>
-          <Link href="/terms">
+          {/* <Link href="/terms">
             <p className="sm:mr-6 hover:underline">
               {`Terms & Conditions`}
             </p>
-          </Link>
+          </Link> */}
         </div>
 
         <div>
-          <Link href="/privacy">
+          {/* <Link href="/privacy">
             <p className="mb-1 sm:mb-auto hover:underline">
               Privacy Policy
             </p>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>

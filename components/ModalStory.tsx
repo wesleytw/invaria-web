@@ -61,7 +61,7 @@ const ModalStory = () => {
               <div className='h-[192px] w-[1px] border-l bg-white -mt-1 z-0'></div>
             </div>
             <div className=" w-[485px] font-noraml text-sm">
-              The researcher found that the building named Amwaj20, which was built in the Persian Gulf region in 2015... Electronic parts and documents are scattered at the entrance, especially, the texts on the documents are sorted out and translated... One of the paragraphs reads "... First priority, enter your address codes in the device, also with desire of property resources... You may get an unexpected prizes…”
+              The researcher found that the building named Amwaj20, which was built in the Persian Gulf region in 2015... Electronic parts and documents are scattered at the entrance, especially, the texts on the documents are sorted out and translated... One of the paragraphs reads `&quot;`... First priority, enter your address codes in the device, also with desire of property resources... You may get an unexpected prizes…`&quot;`
             </div>
           </div>
           {/* story 3 */}
@@ -91,7 +91,7 @@ const ModalStory = () => {
               <div className='h-[192px] w-[1px] border-l bg-white -mt-1 z-0'></div>
             </div>
             <div className=" w-[485px] font-noraml text-sm">
-              "...Pioneer Advantages... Amwaj20 will Activate the Portal to... this Device Can be Used in Different Scenario... Like Derivative of Power…", an unknown message unexpectedly appeared on REFLECTOR. After translation by the researcher, it was found that the device has the function of collecting information; meanwhile, the device is processing sort of formulas from previous data and surrounding events... Possibly, something is going to be reflected…
+            `&quot;`...Pioneer Advantages... Amwaj20 will Activate the Portal to... this Device Can be Used in Different Scenario... Like Derivative of Power…`&quot;`, an unknown message unexpectedly appeared on REFLECTOR. After translation by the researcher, it was found that the device has the function of collecting information; meanwhile, the device is processing sort of formulas from previous data and surrounding events... Possibly, something is going to be reflected…
             </div>
           </div>
           {/* story 5 */}
@@ -155,7 +155,7 @@ const ModalStory = () => {
             <div className="flex flex-col">
               {/* <img className="h-[86px] w-[154px] mr-[44px] mb-[24px]" src={img_story3} alt="" /> */}
               <div className=" w-full font-noraml text-sm">
-                The researcher found that the building named Amwaj20, which was built in the Persian Gulf region in 2015... Electronic parts and documents are scattered at the entrance, especially, the texts on the documents are sorted out and translated... One of the paragraphs reads "... First priority, enter your address codes in the device, also with desire of property resources... You may get an unexpected prizes…”
+                The researcher found that the building named Amwaj20, which was built in the Persian Gulf region in 2015... Electronic parts and documents are scattered at the entrance, especially, the texts on the documents are sorted out and translated... One of the paragraphs reads `&quot;`... First priority, enter your address codes in the device, also with desire of property resources... You may get an unexpected prizes…`&quot;`
             </div>
             </div>
           </div>
@@ -191,7 +191,7 @@ const ModalStory = () => {
             <div className="flex flex-col">
               {/* <img className="h-[86px] w-[154px] mr-[44px] mb-[24px]" src={img_story5} alt="" /> */}
               <div className=" w-full font-noraml text-sm">
-                "...Pioneer Advantages... Amwaj20 will Activate the Portal to... this Device Can be Used in Different Scenario... Like Derivative of Power…", an unknown message unexpectedly appeared on REFLECTOR. After translation by the researcher, it was found that the device has the function of collecting information; meanwhile, the device is processing sort of formulas from previous data and surrounding events... Possibly, something is going to be reflected…
+              `&quot;`...Pioneer Advantages... Amwaj20 will Activate the Portal to... this Device Can be Used in Different Scenario... Like Derivative of Power…`&quot;`, an unknown message unexpectedly appeared on REFLECTOR. After translation by the researcher, it was found that the device has the function of collecting information; meanwhile, the device is processing sort of formulas from previous data and surrounding events... Possibly, something is going to be reflected…
             </div>
             </div>
           </div>
