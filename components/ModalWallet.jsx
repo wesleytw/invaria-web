@@ -19,13 +19,13 @@ const ModalWallet = () => {
   const [usdcBalance, setUsdcBalance] = useState()
   const address = useAddress();
   const network = useNetwork();
-  const { ethereum } = window;
-  const provider = new ethers.providers.Web3Provider(ethereum);
-  const signer = provider.getSigner()
   const [getCoinPrice, setgetCoinPrice] = useState()
 
 
   const checkIfWalletIsConnected = async () => {
+    const { ethereum } = window;
+    const provider = new ethers.providers.Web3Provider(ethereum);
+    const signer = provider.getSigner()
     if (!ethereum) {
       console.log("Make sure you have metamask!");
       return;
@@ -58,16 +58,18 @@ const ModalWallet = () => {
   }
 
   useEffect(() => {
-    // 當scroll時，不知為何network == undefined
-    if (network[0].data.chain == undefined) {
-      return
-    } else {
-      if (pervState[0] == network[0].data.chain.name && pervState[1] == address) return
+    if (typeof window !== "undefined") {
+      // 當scroll時，不知為何network == undefined
+      if (network[0].data.chain == undefined) {
+        return
+      } else {
+        if (pervState[0] == network[0].data.chain.name && pervState[1] == address) return
+      }
+      pervState[0] = network[0].data.chain.name
+      pervState[1] = address
+      console.log(network[0].data.chain.name, pervState)
+      checkIfWalletIsConnected()
     }
-    pervState[0] = network[0].data.chain.name
-    pervState[1] = address
-    console.log(network[0].data.chain.name, pervState)
-    checkIfWalletIsConnected()
   }, [address, network])
 
   return (
