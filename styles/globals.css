@@ -2,22 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-* html {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://rsms.me/inter/inter.css');
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'Inter var', sans-serif;
+  }
 }
 
-body {
+body, html {
+  font-family: 'Inter', sans-serif;
+  min-width:400px;
   background: hsl(0, 0%, 0%);
 }
-.welcome{
-  background:radial-gradient(64.06% 64.06% at 50% 35.94%, #55465D 0%, #000000 100%);
+
+.flameWidth{
+  width: 100%;
 }
-.floatingbg {
+
+.cloud1 {
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -26,8 +28,50 @@ body {
   animation-direction: alternate;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
-  -webkit-animation-name: floating;
-  animation-name: floating;
+  -webkit-animation-name: cloud1floating;
+  animation-name: cloud1floating;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  opacity: 1;
+  -webkit-transition: margin 2s cubic-bezier(0.2, 0.6, 0.3, 1), opacity 2s ease;
+  transition: margin 2s cubic-bezier(0.2, 0.6, 0.3, 1), opacity 2s ease;
+  animation-duration: 6s;
+  position: absolute;
+}
+
+@keyframes cloud1floating {
+  0% {
+    -webkit-transform: translateX(-30px);
+    transform: translateX(-30px);
+  }
+
+  100% {
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+  }
+}
+
+.cloud2 {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: cloud2floating;
+  animation-name: cloud2floating;
   -webkit-animation-play-state: running;
   animation-play-state: running;
   -webkit-animation-timing-function: ease-in-out;
@@ -42,19 +86,23 @@ body {
   justify-content: center;
   opacity: 1;
   -webkit-transition: margin 1s cubic-bezier(0.2, 0.6, 0.3, 1), opacity 2s ease;
-  transition: margin 1s cubic-bezier(0.2, 0.6, 0.3, 1), opacity 2s ease;
-  animation-duration: 4s;
+  transition: margin 2s cubic-bezier(0.2, 0.6, 0.3, 1), opacity 2.5s ease;
+  animation-duration: 10s;
   position: absolute;
 }
 
-@keyframes floating {
+@keyframes cloud2floating {
   0% {
-    -webkit-transform: translateY(8px) rotate3d(0, 0, 1, 3deg);
-    transform: translateY(8px) rotate3d(0, 0, 1, 3deg);
+    -webkit-transform: translateX(20px);
+    transform: translateX(20px);
   }
 
   100% {
-    -webkit-transform: translateY(-8px) rotate3d(0, 0, 1, 0deg);
-    transform: translateY(-8px) rotate3d(0, 0, 1, 0deg);
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
   }
+}
+
+.btnShadow {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
