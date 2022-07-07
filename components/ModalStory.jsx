@@ -1,6 +1,4 @@
 import React from 'react'
-import { ic_close } from '../public/icons';
-import { img_story1, img_story2, img_story3, img_story4, img_story5 } from '../public/story'
 
 const ModalStory = () => {
   return (

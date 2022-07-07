@@ -24,7 +24,7 @@ export const Discord = () => (
   </Link>
 );
 
-export const OpenLink = ({ link, children }: { link: string, children: any }) => (
+export const OpenLink = ({ link, children }) => (
   <Link className="text-invar-purple hover:underline z-20"
     href='#'
     onClick={(e) => {

@@ -2,7 +2,7 @@ import { ArrowUpIcon } from '@heroicons/react/outline'
 import { useEffect, useState } from "react"
 
 const ScrollToTop = () => {
-  const [showButton, setShowButton] = useState<boolean>(false);
+  const [showButton, setShowButton] = useState(false);
 
   const scrollToTop = () => {
     window.scrollTo({

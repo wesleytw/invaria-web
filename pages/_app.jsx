@@ -1,5 +1,4 @@
 import '../styles/globals.css'
-import type { AppProps } from 'next/app'
 import reportWebVitals from '../src/reportWebVitals';
 import { ThirdwebProvider, ChainId } from "@thirdweb-dev/react";
 import { Buffer } from 'buffer';
@@ -9,7 +8,7 @@ import { Buffer } from 'buffer';
 
 const desiredChainId = ChainId.Rinkeby;
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }) {
   return (
     <ThirdwebProvider desiredChainId={desiredChainId}>
       <Component {...pageProps} />

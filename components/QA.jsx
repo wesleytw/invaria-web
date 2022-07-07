@@ -2,8 +2,8 @@ import { MinusIcon, PlusIcon } from '@heroicons/react/outline'
 import { useState } from "react";
 import useCollapse from 'react-collapsed';
 
-const QA = ({ question, answer }: TQA) => {
-  const [isExpanded, setIsExpanded] = useState<boolean>(false);
+const QA = ({ question, answer }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
   const { getCollapseProps, getToggleProps } = useCollapse({ isExpanded });
 
   const toggleCollapse = () => {
