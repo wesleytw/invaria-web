@@ -12,9 +12,9 @@ function App() {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      // window.addEventListener("scroll", () =>
-      //   setHeaderBackground(window.pageYOffset > 10)
-      // );
+      window.addEventListener("scroll", () =>
+        setHeaderBackground(window.pageYOffset > 10)
+      );
     }
   }, []);
 

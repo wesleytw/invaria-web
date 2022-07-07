@@ -9,7 +9,6 @@ import erc20ABI from '../src/utils/erc20ABI.json'
 import { fetchPrice } from '../src/utils/fetchPrice'
 
 const Navbar = ({ headerBackground }) => {
-
   const address = useAddress();
   const network = useNetwork();
   const [getCoinPrice, setgetCoinPrice] = useState()
@@ -63,15 +62,16 @@ const Navbar = ({ headerBackground }) => {
           ${headerBackground ? "md:bg-invar-dark" : "md:bg-transparent"}`}
       >
         <ModalWallet />
-        <div className="navbar w-full sticky top-0 left-0 right-0 bg-[#fff0] md:justify-center items-center h-[66px] md:h-[88px] flex">
+        <div className="navbar w-full sticky top-0 left-0 right-0 bg-[#fff0] md:justify-center items-center h-[60px] md:h-[88px] flex">
           <div className="navbar-start"></div>
           <div className="navbar-center">
             {/* <Logo className="m-6 h-[2.5rem] w-24 xl:w-32 " /> */}
+            <img className="m-6 h-[2.5rem] w-24 xl:w-32" src='/logo_white.svg' />
           </div>
           <div className="navbar-end md:hidden">
             {!toggleMenu &&
               <button className=" absolute top-[24px] right-[27px]" onClick={() => setToggleMenu(true)}>
-                <img className="h-[20px] w-[20px]" src="/icons/ic_menu" alt="" />
+                <img className="h-[20px] w-[20px]" src="/icons/ic_menu.svg" alt="" />
               </button>}
             {toggleMenu &&
               <button className=" absolute top-[24px] right-[27px]" onClick={() => handleToggle()}>
