@@ -1,9 +1,11 @@
-// import { ReactComponent as Logo } from '../assets/logo_white.svg';
-import Link from 'next/link';
-
-import Footer from './Footer';
+import React from 'react'
+import { QA } from '../components'
+import { tutorialsList, faqList } from "../src/constants"
+import Image from 'next/image'
+import Link from 'next/link'
 
 const Terms = () => {
+
   const titleList = [
     {
       id: '1',
@@ -54,9 +56,9 @@ const Terms = () => {
   return (
     <div>
       <div className="h-20 bg-invar-dark grid place-content-center text-[#030F2B]">
-        {/* <Link to="/">
-          <Logo className="w-16 xl:w-20" />
-        </Link> */}
+        <Link href="/">
+          <img className='cursor-pointer w-[95px]' src='/logo_white.svg' />
+        </Link>
       </div>
       <div className="bg-gradient-to-b from-[#44334C] to-[#1E1722] py-8 px-6 xl:px-40 grid grid-cols-8 gap-12">
         <div className="container text-white col-span-8 md:col-span-5">
@@ -426,9 +428,8 @@ const Terms = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   )
 }
 
-export default Terms;
+export default Terms

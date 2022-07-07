@@ -1,10 +1,6 @@
 import '../styles/globals.css'
 import reportWebVitals from '../src/reportWebVitals';
 import { ThirdwebProvider, ChainId } from "@thirdweb-dev/react";
-import { Buffer } from 'buffer';
-
-// window.Buffer = window.Buffer || Buffer;
-// // https://github.com/NoahZinsmeister/web3-react/issues/423
 
 const desiredChainId = ChainId.Rinkeby;
 

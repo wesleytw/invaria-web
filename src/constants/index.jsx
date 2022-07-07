@@ -1,7 +1,7 @@
 import { OpenLink, ButtonMailto } from '../../components/icons/Link';
 import { Link } from "react-router-dom";
 
-export const faqList: TQA[] = [
+export const faqList = [
   {
     question: 'Why InVaria 2222 is unique?',
     answer: (
@@ -177,7 +177,7 @@ export const faqList: TQA[] = [
   },
 ];
 
-export const tutorialsList: TQA[] = [
+export const tutorialsList = [
   
   {
     question: 'What do I need to get started?',

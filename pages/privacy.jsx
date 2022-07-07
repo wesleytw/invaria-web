@@ -1,11 +1,9 @@
-// import { ReactComponent as Logo } from '../assets/logo_white.svg';
-// import {
-//   Link,
-// } from "react-router-dom";
-import { ButtonMailto } from './icons/Link';
-import Footer from './Footer';
+import { ButtonMailto } from '../components/icons/Link';
+import Image from 'next/image'
+import Link from 'next/link'
 
 const Privacy = () => {
+  
   const titleList = [
     {
       id: '1',
@@ -47,11 +45,10 @@ const Privacy = () => {
 
   return (
     <div>
-      <div className="h-20 bg-invar-dark grid place-content-center">
-      {/* <Link to="/">
-        <Logo className="w-16 xl:w-20" />
-      </Link> */}
-
+      <div className="h-20 bg-invar-dark grid place-content-center text-[#030F2B]">
+        <Link href="/">
+          <Image className='cursor-pointer' width={95} height={34} src='/logo_white.svg' />
+        </Link>
       </div>
       <div className="bg-gradient-to-b from-[#44334C] to-[#1E1722] py-8 px-6 xl:px-60 grid grid-cols-8 gap-12">
         <div className="container text-white col-span-8 md:col-span-5">
@@ -253,7 +250,7 @@ const Privacy = () => {
             .
           </p>
         </div>
-        <div className="md:col-span-3 hidden md:block">
+        <div className="md:col-span-3 hidden md:block fixed top-[117px] right-6 xl:right-40">
           <div className="bg-invar-dark px-6 pt-6 pb-3 rounded text-invar-light-grey">
             {titleList.map((item, index) => (
               <div key={index} className="pb-3" id={item.id}>
@@ -263,7 +260,6 @@ const Privacy = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   )
 }

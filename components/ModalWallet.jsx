@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { ic_walletconnect, ic_metamask, ic_close, ic_eth, ic_usdc } from '../public/icons';
 import { ethers } from 'ethers'
 import {
   useMetamask, useWalletConnect, useCoinbaseWallet,
@@ -80,15 +79,15 @@ const ModalWallet = () => {
           <div className="modal bg-[#000000b6]">
             <div className="modal-box w-[375px] h-[223px] absolute top-[73px] right-[85px] rounded-[4px] bg-gradient-to-b from-primary to-[#1E1722] p-6">
               <label htmlFor="my-modal-3" className="btn btn-sm absolute top-3 right-3 rounded-[4px] bg-opacity-0 hover:bg-opacity-0 text-[#fff] border-none">
-                <img className="h-[20px] w-[20px]" src={ic_close} alt="" />
+                <img className="h-[20px] w-[20px]" src='/icons/ic_close.svg' alt="" />
               </label>
               <h3 className="text-2xl font-semibold text-white mb-[22px]">Connect Wallet</h3>
               <button className="btn btn-primary relative w-[327px] h-[56px] rounded flex justify-center items-center border-none normal-case" onClick={connectWithMetamask}>
-                <img className="absolute top-[13px] left-4 h-[30px] w-[30px]" src={ic_metamask} alt="" />
+                <img className="absolute top-[13px] left-4 h-[30px] w-[30px]" src='/icons/ic_metamask.png' alt="" />
                 <p className=" font-semibold text-accent">MetaMask</p>
               </button>
               <button className="btn btn-primary mt-3 relative w-[327px] h-[56px] rounded flex justify-center items-center border-none normal-case" onClick={connectWithWalletConnect}>
-                <img className="absolute top-[13px] left-4 h-[30px] w-[30px]" src={ic_walletconnect} alt="" />
+                <img className="absolute top-[13px] left-4 h-[30px] w-[30px]" src='/icons/ic_walletconnect.png' alt="" />
                 <p className=" font-semibold text-accent">WalletConnect</p>
               </button>
             </div>
@@ -106,7 +105,7 @@ const ModalWallet = () => {
               <div className=" border-b border-primary mt-3 w-[324px]"></div>
               <div className=" w-full mt-[14px] flex justify-between items-center ">
                 <div className=" flex justify-center items-center text-white font-semibold">
-                  <img className="h-[32px] w-[32px] mr-[12px]" src={ic_eth} alt="" />
+                  <img className="h-[32px] w-[32px] mr-[12px]" src='/icons/ic_eth.png' alt="" />
                   <p>ETH</p>
                 </div>
                 <div className=" flex flex-col justify-center items-end text-white font-semibold">
@@ -117,7 +116,7 @@ const ModalWallet = () => {
               </div>
               <div className=" w-full mt-[14px] flex justify-between items-center ">
                 <div className=" flex justify-center items-center text-white font-semibold">
-                  <img className="h-[32px] w-[32px] mr-[12px]" src={ic_usdc} alt="" />
+                  <img className="h-[32px] w-[32px] mr-[12px]" src='/icons/ic_usdc.png' alt="" />
                   <p>USDC</p>
                 </div>
                 <div className=" flex flex-col justify-center items-end text-white font-semibold">
