@@ -10,7 +10,6 @@ import { fetchPrice } from '../src/utils/fetchPrice'
 let pervState = []
 
 const ModalWallet = () => {
-  const connectWithCoinbaseWallet = useCoinbaseWallet();
   const connectWithMetamask = useMetamask();
   const connectWithWalletConnect = useWalletConnect();
   const disconnectWallet = useDisconnect();
@@ -53,6 +52,34 @@ const ModalWallet = () => {
       const decimals = await usdcContract.decimals();
       setUsdcBalance((+(ethers.utils.formatUnits(await usdcContract.balanceOf(address), decimals))).toFixed(3))  //.toNumber()  //.toFixed(1)
       setgetCoinPrice(await fetchPrice("ethereum"))
+    }
+  }
+  const usdcAddr = "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48" //LFG 0x002fF2aD81F0Fa36387eC6F4565B9667516C5342
+  const tokenSymbol = 'USDC';
+  const tokenDecimals = 6;
+  const tokenImage = 'https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png';
+
+  async function addTokenFunction() {
+    try {
+      const wasAdded = await ethereum.request({
+        method: 'wallet_watchAsset',
+        params: {
+          type: 'ERC20',
+          options: {
+            address: usdcAddr,
+            symbol: tokenSymbol,
+            decimals: tokenDecimals,
+            image: tokenImage,
+          },
+        },
+      });
+      if (wasAdded) {
+        console.log('Thanks for your interest!');
+      } else {
+        console.log('Token has not been added');
+      }
+    } catch (error) {
+      console.log(error);
     }
   }
 
@@ -108,22 +135,26 @@ const ModalWallet = () => {
                   <img className="h-[32px] w-[32px] mr-[12px]" src='/icons/ic_eth.png' alt="" />
                   <p>ETH</p>
                 </div>
-                <div className=" flex flex-col justify-center items-end text-white font-semibold">
+                <span className=" flex flex-col justify-center items-end text-white font-semibold">
                   <p>{ethBalance}</p>
                   <p className=" text-sm font-normal text-neutral">
                     ${(ethBalance * (getCoinPrice?.ethereum.usd)).toFixed(3)} USD</p>
-                </div>
+                </span>
               </div>
-              <div className=" w-full mt-[14px] flex justify-between items-center ">
+              <div className=" relative w-full mt-[14px] flex justify-between items-center group">
                 <div className=" flex justify-center items-center text-white font-semibold">
                   <img className="h-[32px] w-[32px] mr-[12px]" src='/icons/ic_usdc.png' alt="" />
                   <p>USDC</p>
                 </div>
-                <div className=" flex flex-col justify-center items-end text-white font-semibold">
+                <span className=" flex flex-col justify-center items-end text-white font-semibold transition-opacity group-hover:opacity-0">
                   <p className=" text-base">{usdcBalance}</p>
                   {getCoinPrice && <p className=" text-sm font-normal text-neutral">
                     ${(usdcBalance * (getCoinPrice["usd-coin"].usd)).toFixed(3)} USD</p>}
-                </div>
+                </span>
+                <button className="btn btn-sm btn-outline border-[#E6E7EA] absolute w-[90px] h-[28px] bottom-[6px] right-0 
+                  ransition-opacity opacity-0 group-hover:opacity-100 text-xs font-semibold px-3 py-[6px] rounded normal-case 
+                  hover:border-[#E6E7EA] text-white hover:text-white" onClick={()=>addTokenFunction()}>
+                  Add Token</button>
               </div>
               <button className="btn btn-primary relative w-[327px] h-[56px] mt-[14px] rounded flex justify-center items-center border-none normal-case" onClick={disconnectWallet}>
                 <p className=" font-semibold text-accent">Disconnect</p>
