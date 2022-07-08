@@ -30,14 +30,7 @@ export const Discord = () => (
 );
 
 export const OpenLink = ({ link, children }) => (
-  // <Link className="text-invar-purple hover:underline z-20"
-  //   href='#'
-  //   onClick={(e) => {
-  //     window.open(link)
-  //     e.preventDefault();
-  //   }}
-  // >
-  <a className='mr-3' href={link} target="_blank" rel="noopener noreferrer">
+  <a className=' text-invar-purple hover:underline' href={link} target="_blank" rel="noopener noreferrer">
     {children}
   </a>
   // </Link>
@@ -51,7 +44,7 @@ export const ButtonMailto = () => (
   //     e.preventDefault();
   //   }}
   // >
-  <a className='mr-3' href='mailto:info@invar.finance' target="_blank" rel="noopener noreferrer">
+  <a className=' text-invar-purple hover:underline' href='mailto:info@invar.finance' target="_blank" rel="noopener noreferrer">
     {`info@invar.finance`}
   </a>
   // {/* </Link> */ }

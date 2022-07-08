@@ -25,8 +25,8 @@ function App() {
       <div className="w-full flex flex-col justify-center items-center h-0 ">
         <label htmlFor="my-modal-1" className="btn modal-button w-[183px] md:w-min btnShadow px-6 py-3 text-sm text-info rounded absolute top-[272px] md:top-[408px] md:left-[245px] z-20 normal-case border-none">
           Storyline</label>
-        <button className='btn w-[183px] md:w-max btnShadow px-6 py-3 mt-4 md:mt-0 text-sm text-info rounded absolute top-[328px] md:top-[280px] md:right-1/4 normal-case border-none z-20 ' >
-          FAQ & Tutorials</button>
+        <a href={`#faq`} className='btn w-[183px] md:w-max btnShadow px-6 py-3 mt-4 md:mt-0 text-sm text-info rounded absolute top-[328px] md:top-[280px] md:right-1/4 normal-case border-none z-20 ' >
+          FAQ & Tutorials</a>
       </div>
       <div className="relative">
         <img className='h-screen w-full object-cover' src='/bg/bg_phase0.png' alt="bg_phase0" />
@@ -53,7 +53,7 @@ function App() {
             Build up communication channel… Discord
             set up… Twitter launched… Now we can communicate, discuss with each others about InVaria and the ideas we have there!
         </div>
-        <div className="w-[92px] m-6 flex justify-between absolute bottom-[0px] right-0 z-40">
+        <div className="w-[92px] m-6 flex justify-between absolute bottom-[0px] right-0 z-20">
           <Twitter />
           <Discord />
         </div>
@@ -75,6 +75,7 @@ function App() {
             <br />
             <p>
               In phase one, a group of InVariants will build a tokenized real estate model first,
+              <span id='faq'></span>
               then... the narrative and journey begin...
             </p>
           </div>

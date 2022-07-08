@@ -1,6 +1,5 @@
 import { OpenLink, ButtonMailto } from '../../components/icons/Link';
-import { Link } from "react-router-dom";
-
+import Link from 'next/link'
 export const faqList = [
   {
     question: 'Why InVaria 2222 is unique?',
@@ -29,12 +28,12 @@ export const faqList = [
     question: 'Who can mint InVaria 2222 NFT?',
     answer: (
       <div>
-        <p className="text-invar-grey inline font-medium">User who pass identity verification is eligible to mint InVaria 2222 NFT. </p>
+        <p className="text-invar-grey inline font-semibold">User who pass identity verification is eligible to mint InVaria 2222 NFT. </p>
         Even though we defend the virtue of decentralization, to scale crypto adoption,
         there are still some guidelines we should follow.
         <div>
           <br />
-          {/* <p>*Check <span><Link to="/terms" className="text-invar-purple">Terms & Conditions</Link></span> for more policy.</p> */}
+          <p>*Check <span className="text-invar-purple font-semibold hover:underline"><Link href="/terms" >Terms & Conditions</Link></span> for more policy.</p>
         </div>
       </div>
     ),
@@ -54,7 +53,7 @@ export const faqList = [
     question: 'What is the schedule of NFT mint?',
     answer: (
       <p>
-        In phase 1, the first NFT will have <span className="text-invar-grey font-medium">3 mint stages, pre-mint, whitelist and public mint</span>.
+        In phase 1, the first NFT will have <span className="text-invar-grey font-semibold">3 mint stages, pre-mint, whitelist and public mint</span>.
         The official timeline of each stage will announce in our social media
         (<span>
           <OpenLink link="https://twitter.com/InVarFinance">
@@ -74,7 +73,7 @@ export const faqList = [
     answer: (
       <p>
         Costs incurred from minting NFT(s) can conclude to two kinds, minting cost and gas (network) fee.
-        In general, <span className="text-invar-grey font-medium"> NFT minting cost is priced at 10,000
+        In general, <span className="text-invar-grey font-semibold"> NFT minting cost is priced at 10,000
         <OpenLink link="https://coinmarketcap.com/currencies/usd-coin/"> USDC </OpenLink> (ERC-20)
         </span>
         <span>, and </span>
@@ -91,7 +90,7 @@ export const faqList = [
     question: 'Is there a maximum mint limit per wallet during the mint stage?',
     answer: (
       <p>
-        <span className="text-invar-grey font-medium">No limit. First come, first served. </span>
+        <span className="text-invar-grey font-semibold">No limit. First come, first served. </span>
         Due to InVaria 2222 being in the exploration period, no single human knows
         what will happen when this new type of NFT comes out. So, we free the restriction in the current phase.
       </p>
@@ -103,7 +102,7 @@ export const faqList = [
       <p>
         Once you successfully minted first InVaria 2222 NFT,
         you will certainly have ownership of the NFT and the right of stake-to-earn.
-        In addition,<span className="text-invar-grey font-medium"> you will have exclusive pass-type NFT free mint (limited privilege for phase 1 participants)</span>.
+        In addition,<span className="text-invar-grey font-semibold"> you will have exclusive pass-type NFT free mint (limited privilege for phase 1 participants)</span>.
       </p>
     ),
   },
@@ -120,7 +119,7 @@ export const faqList = [
     question: 'What is NFT staking and others I need to know?',
     answer: (
       <p>
-        <span className="text-invar-grey font-medium">InVaria 2222 NFT is an interest-bearing (when staking), redemption-secured NFT
+        <span className="text-invar-grey font-semibold">InVaria 2222 NFT is an interest-bearing (when staking), redemption-secured NFT
         with one-year lock-up period.</span> NFT owners can stake their NFT in the project website
         and accrue interest from time to time, besides, NFT is enable to burn after
         the lock-up period and return your initial mint cost.
@@ -131,10 +130,11 @@ export const faqList = [
     question: 'The future plans about the funds and development?',
     answer: (
       <p>
-        <span className="text-invar-grey font-medium">About fund management,</span> 80% of funds go directly to FlowBay Financial Holdings,
+        <span className="text-invar-grey font-semibold">About fund management,</span> 80% of funds go directly to FlowBay Financial Holdings,
         a financial group with property management unit and fund management team;
         20% of funds will transfer to staking smart contract.
-        <br /> <br /> <span className="text-invar-grey font-medium">About project development,</span>
+        <br /> <br /> 
+        <span className=" text-invar-grey font-semibold">About project development,</span>
         tokenization of RWAs is only our first step, most of the funds will
         be utilized to generate more profits through property management and development,
         small amount will be used in hybrid finance development.
@@ -149,7 +149,7 @@ export const faqList = [
         NFT (ERC-1155) <br />
         Staking
         <li>InVaria 2222 operating account:</li>
-        0xAcB683ba69202c5ae6a3B9b9b191075295b1c41C <br />
+        <span className="text-invar-purple font-semibold">0xAcB683ba69202c5ae6a3B9b9b191075295b1c41C</span> <br />
       </ul>
     ),
   },
@@ -181,7 +181,9 @@ export const tutorialsList = [
   
   {
     question: 'What do I need to get started?',
-    answer: ( <p> First and foremost, you need to learn how to use 
+    answer: ( 
+    <p>
+       First and foremost, you need to learn how to use 
       Metamask (or other digital wallets), it allows users to access 
       InVaria 2222 service through a browser extension or mobile app. 
       <br/> <br/>
@@ -190,8 +192,9 @@ export const tutorialsList = [
       your crypto-exchange account. By using and interacting with 
       applications, you will need enough ETH to pay gas fee (transaction 
       fee). In common case, prepare 0.05 ETH is sufficient to mint NFT. 
-      <span className=" text-invar-error font-medium"> *More NFT you 
-      mint, may cost more gas fee.</span></p>),
+      <span className="  text-invar-error font-semibold"> *More NFT you 
+      mint, may cost more gas fee.</span>
+    </p>),
   },
   {
     question: 'What wallets does InVaria 2222 support?',
@@ -210,4 +213,3 @@ export const tutorialsList = [
     answer: 'In order to conduct certain activities on our website, InVaria 2222 maintains a KYC (Know Your Customer) policy to comply with the applicable law, regulations, or guidance to crypto-service provider, we will have no liability or responsibility for your compliance with laws or regulations governing the transfer and use of NFTs.',
   },
 ];
-  
