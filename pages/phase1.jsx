@@ -32,7 +32,7 @@ function App() {
         <img className='h-screen w-full object-cover' src='/bg/bg_phase0.png' alt="bg_phase0" />
         {/* <div className="hidden md:flex flex-col max-w-0 "> */}
           <img className=" cloud1 absolute top-56 md:top-[161px] -left-16 md:left-8 right-0 w-[700px] md:w-[700px] object-contain z-10" src='/cloud1.png' alt="cloud1" />
-          <img className=" cloud2 absolute top-[430px] -right-20 md:right-0 w-[600px] md:w-[600px] object-contain z-10" src='/cloud2.png' alt="cloud2" />
+          <img className=" cloud2 absolute top-[380px] -right-20 md:right-0 w-[600px] md:w-[600px] object-contain z-10" src='/cloud2.png' alt="cloud2" />
         {/* </div> */}
         {/* <div className=" flex md:hidden ">
           <img className=" absolute top-56 md:top-[161px] -left-16 md:left-8 right-0 w-[700px] md:w-[700px] object-contain z-10" src='/cloud1.png' alt="cloud1" />
