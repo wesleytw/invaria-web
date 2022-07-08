@@ -5,7 +5,6 @@ import { ScrollToTop, QA, Footer, Navbar, ModalStory } from '../components';
 import { tutorialsList, faqList } from "../src/constants";
 import Image from 'next/image'
 
-
 function App() {
   const [headerBackground, setHeaderBackground] = useState(true);
 
@@ -29,7 +28,7 @@ function App() {
           FAQ & Tutorials</a>
       </div>
       <div className="relative">
-        <img className='h-screen w-full object-cover' src='/bg/bg_phase0.png' alt="bg_phase0" />
+        <img className='h-screen min-h-screen w-full object-cover' src='/bg/bg_phase0.png' alt="bg_phase0" />
         {/* <div className="hidden md:flex flex-col max-w-0 "> */}
           <img className=" cloud1 absolute top-56 md:top-[161px] -left-16 md:left-8 right-0 w-[700px] md:w-[700px] object-contain z-10" src='/cloud1.png' alt="cloud1" />
           <img className=" cloud2 absolute top-[380px] -right-20 md:right-0 w-[600px] md:w-[600px] object-contain z-10" src='/cloud2.png' alt="cloud2" />

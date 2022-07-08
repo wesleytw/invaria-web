@@ -1,7 +1,4 @@
 import React from 'react'
-import { QA } from '../components'
-import { tutorialsList, faqList } from "../src/constants"
-import Image from 'next/image'
 import Link from 'next/link'
 
 const Terms = () => {

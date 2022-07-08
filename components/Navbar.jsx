@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { ModalWallet } from './'
+import { ModalWallet, ModalStory } from './'
 import { ethers } from 'ethers'
 import { shortenAddress } from '../src/utils/shortenAddress'
 import { useNetwork, useAddress, useMetamask, useWalletConnect, useDisconnect } from "@thirdweb-dev/react";
@@ -60,6 +60,7 @@ const Navbar = ({ headerBackground }) => {
           ${headerBackground ? "md:bg-invar-dark" : "md:bg-transparent"}`}
       >
         <ModalWallet />
+        <ModalStory />
         <div className="navbar w-full sticky top-0 left-0 right-0 bg-[#fff0] md:justify-center items-center h-[60px] md:h-[88px] flex">
           <div className="navbar-start"></div>
           <div className="navbar-center">
@@ -83,7 +84,7 @@ const Navbar = ({ headerBackground }) => {
               <>
                 <label htmlFor="my-modal-4" className="btn btn-sm modal-button btn-outline rounded h-[40px] w-[130px] px-[11px] py-[1px] my-[12px] font-semibold text-sm text-white border-[#44334C] normal-case hover:border-none hover:bg-primary ">
                   Dashboard
-              </label>
+                </label>
                 <label htmlFor="my-modal-4" className="btn btn-sm modal-button btn-outline rounded h-[40px] w-[130px] px-[11px] py-[1px] m-[12px] font-semibold text-sm text-white border-[#44334C] normal-case hover:border-none hover:bg-primary ">
                   {shortenAddress(address)}
                 </label>
@@ -98,7 +99,8 @@ const Navbar = ({ headerBackground }) => {
       </nav>
       {(toggleMenu) &&
         <div className=" fixed top-[60px] z-30 w-full h-screen py-[34px] px-[16px] flex flex-col justify-start items-start md:hidden text-white bg-gradient-to-b from-primary to-[#1E1722]">
-          <h1 className="font-semibold text-base mb-9">Storyline</h1>
+          <label htmlFor="my-modal-1" className=" modal-button hover:underline font-semibold text-base mb-9">
+            Storyline</label>
           <h1 className="font-semibold text-base mb-9">FAQ & Tutorials</h1>
           <h1 className="font-semibold text-base mb-8 cursor-pointer" onClick={() => setLanguage(!language)}>Language</h1>
           {language && <h1 className="font-semibold text-base mb-[27px] mx-2">English</h1>}
