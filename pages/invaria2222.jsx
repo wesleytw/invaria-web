@@ -4,18 +4,10 @@ import { Twitter, Discord } from '../components/icons/Link'
 import { ScrollToTop, QA, Footer, Navbar, ModalStory } from '../components';
 import { tutorialsList, faqList } from "../src/constants";
 import Image from 'next/image'
+import {disableScroll} from '../src/utils/disableScroll'
 
 function App() {
   const [headerBackground, setHeaderBackground] = useState(true);
-  function disable() {
-    // To get the scroll position of current webpage
-    let TopScroll = window.pageYOffset || document.documentElement.scrollTop;
-    let LeftScroll = window.pageXOffset || document.documentElement.scrollLeft;
-      // if scroll happens, set it to the previous value
-      window.onscroll = function () {
-        window.scrollTo(LeftScroll, TopScroll);
-      };
-  }
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -31,7 +23,7 @@ function App() {
       <Navbar headerBackground={headerBackground} />
       <ModalStory />
       <div className="w-full flex flex-col justify-center items-center h-0 ">
-        <label htmlFor="my-modal-1" onClick={()=>disable()} className="btn modal-button w-[183px] md:w-min btnShadow px-6 py-3 text-sm text-info rounded absolute top-[272px] md:top-[408px] md:left-[245px] z-20 normal-case border-none">
+        <label htmlFor="my-modal-1" onClick={()=>disableScroll()} className="btn modal-button w-[183px] md:w-min btnShadow px-6 py-3 text-sm text-info rounded absolute top-[272px] md:top-[408px] md:left-[245px] z-20 normal-case border-none">
           Storyline</label>
         <a href={`#faq`} className='btn w-[183px] md:w-max btnShadow px-6 py-3 mt-4 md:mt-0 text-sm text-info rounded absolute top-[328px] md:top-[280px] md:right-1/4 normal-case border-none z-20 ' >
           FAQ & Tutorials</a>

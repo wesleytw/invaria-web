@@ -6,6 +6,7 @@ import { useNetwork, useAddress, useMetamask, useWalletConnect, useDisconnect } 
 import erc20ABI from '../src/utils/erc20ABI.json'
 import { fetchPrice } from '../src/utils/fetchPrice'
 import Link from 'next/link'
+import {disableScroll, enableScroll} from '../src/utils/disableScroll'
 
 const Navbar = ({ headerBackground }) => {
   const address = useAddress();
@@ -20,10 +21,6 @@ const Navbar = ({ headerBackground }) => {
   const connectWithWalletConnect = useWalletConnect();
   const disconnectWallet = useDisconnect();
 
-  function handleToggle() {
-    setToggleMenu(false)
-    setToggleWallet(false)
-  }
   const checkIfWalletIsConnected = async () => {
     const { ethereum } = window;
     const provider = new ethers.providers.Web3Provider(ethereum);
@@ -45,6 +42,7 @@ const Navbar = ({ headerBackground }) => {
     if (typeof window !== "undefined") {
       if (!address) return
       setToggleWallet(false)
+      enableScroll()
     }
   }, [address]);
 
@@ -54,6 +52,17 @@ const Navbar = ({ headerBackground }) => {
       checkIfWalletIsConnected()
     }
   }, [address, network]);
+
+  function openMenu() {
+    setToggleMenu(true)
+    disableScroll()
+  }
+
+  function closeMenu() {
+    setToggleMenu(false)
+    setToggleWallet(false)
+    enableScroll()
+  }
 
   return (
     <>
@@ -71,11 +80,11 @@ const Navbar = ({ headerBackground }) => {
           </div>
           <div className="navbar-end md:hidden">
             {!toggleMenu &&
-              <button className=" absolute top-[24px] right-[27px]" onClick={() => setToggleMenu(true)}>
+              <button className=" absolute top-[24px] right-[27px]" onClick={() => openMenu()}>
                 <img className="h-[20px] w-[20px]" src="/icons/ic_menu.svg" alt="" />
               </button>}
             {toggleMenu &&
-              <button className=" absolute top-[24px] right-[27px]" onClick={() => handleToggle()}>
+              <button className=" absolute top-[24px] right-[27px]" onClick={() => closeMenu()}>
                 <img className="h-[20px] w-[20px]" src='/icons/ic_close.svg' alt="" />
               </button>}
           </div>
