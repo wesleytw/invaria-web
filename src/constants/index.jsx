@@ -76,10 +76,10 @@ export const faqList = [
         In general, <span className="text-invar-grey font-semibold"> NFT minting cost is priced at 10,000
         <OpenLink link="https://coinmarketcap.com/currencies/usd-coin/"> USDC </OpenLink> (ERC-20)
         </span>
-        <span>, and </span>
+        <span>, and the </span>
         <span>
           <OpenLink link="https://ethereum.org/en/developers/docs/gas/">
-            the gas fee is calculated by the network status of Ethereum
+            gas fee is calculated by the network status of Ethereum
           </OpenLink>
         </span>
         . The additional cost may incur if an unexpected event or false execution happens.

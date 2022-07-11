@@ -46,7 +46,7 @@ const ModalStory = () => {
               <div className='h-[192px] w-[1px] border-l bg-white -mt-1 z-0'></div>
             </div>
             <div className=" w-[485px] font-noraml text-sm">
-              A tribe of humans find out a device with “CRYPTIC REFLECTOR” words carved on it, there is an unclear description shows…「Connecting…Connecting…, Connect to Real World, the Reflector Indicate Power… Asset will…」
+              A tribe of humans find out a device with &quot;CRYPTIC REFLECTOR&quot; words carved on it, there is an unclear description shows…「Connecting…Connecting…, Connect to Real World, the Reflector Indicate Power… Asset will…」
             </div>
           </div>
           {/* story 2 */}

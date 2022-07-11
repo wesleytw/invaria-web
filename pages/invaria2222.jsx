@@ -4,8 +4,6 @@ import { Twitter, Discord } from '../components/icons/Link'
 import { ScrollToTop, QA, Footer, Navbar, ModalStory } from '../components';
 import { tutorialsList, faqList } from "../src/constants";
 import Image from 'next/image'
-import { useRouter } from 'next/router'
-
 
 function App() {
   const [headerBackground, setHeaderBackground] = useState(true);
@@ -18,20 +16,6 @@ function App() {
         window.scrollTo(LeftScroll, TopScroll);
       };
   }
-  const router = useRouter()
-const href ="/"
-    const style = {
-      marginRight: 10,
-      color: router.asPath === href ? 'red' : 'black',
-    }
-  
-    const handleClick = (e) => {
-      e.preventDefault()
-      router.push({
-        pathname: `/`,
-        query: { href: "href" },
-      })
-    }
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -43,9 +27,6 @@ const href ="/"
 
   return (
     <div className=" min-w-full max-w-full relative overscroll-none overflow-hidden h-full bg-gradient-radial from-[#55465D] to-black scrollbar-hide">
-      <a className="text-white" href={href} onClick={handleClick} >
-      "children"
-    </a>
       <ScrollToTop />
       <Navbar headerBackground={headerBackground} />
       <ModalStory />
