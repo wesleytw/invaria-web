@@ -1,13 +1,15 @@
 import React from 'react'
 
 const ModalStory = () => {
+  function enable() {
+    window.onscroll = function () { };
+  }
   return (
     <div>
       <input type="checkbox" id="my-modal-1" className="modal-toggle" />
-
       <div className="modal justify-center items-start bg-[#000000b6] text-2xl text-white">
-        <div className="modal-box hidden md:flex flex-col relative w-[800px] max-w-5xl mt-[80px] mx-0 p-0 pb-[48px] rounded-[4px] bg-gradient-to-b from-primary to-[#1E1722]">
-          <label htmlFor="my-modal-1" className="btn btn-sm p-0 absolute right-[32px] top-[35px] bg-transparent border-none hover:bg-transparent">
+        <div className="modal-box hidden md:flex flex-col relative w-[800px] max-w-5xl mt-[80px] mx-0 p-0 pb-[48px] rounded-[4px] bg-gradient-to-b from-primary to-[#1E1722]  scrollbar-hide">
+          <label htmlFor="my-modal-1" onClick={()=>enable()} className="btn btn-sm p-0 absolute right-[32px] top-[35px] bg-transparent border-none hover:bg-transparent">
             <img className="h-[20px] w-[20px]" src='/icons/ic_close.svg' alt="" />
           </label>
           <h3 className="text-2xl font-semibold m-[36px] mb-5">Storyline</h3>
@@ -96,7 +98,7 @@ const ModalStory = () => {
         </div>
         
         <div className="modal-box h-screen max-h-screen flex flex-col md:hidden relative w-full max-w-5xl mx-0 p-0 pb-[48px] rounded-[4px] bg-gradient-to-b from-primary to-[#1E1722]">
-          <label htmlFor="my-modal-1" className="btn btn-sm p-0 absolute right-[26px] top-[17px] bg-transparent border-none hover:bg-transparent">
+          <label htmlFor="my-modal-1" onClick={()=>enable()} className="btn btn-sm p-0 absolute right-[26px] top-[17px] bg-transparent border-none hover:bg-transparent">
             <img className="h-[20px] w-[20px]" src='/icons/ic_close.svg' alt="" />
           </label>
           <h3 className="text-2xl font-semibold m-[16px] mb-5">Storyline</h3>

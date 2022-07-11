@@ -149,7 +149,8 @@ export const faqList = [
         NFT (ERC-1155) <br />
         Staking
         <li>InVaria 2222 operating account:</li>
-        <span className="text-invar-purple font-semibold">0xAcB683ba69202c5ae6a3B9b9b191075295b1c41C</span> <br />
+        <p className="text-invar-purple font-semibold truncate ">0xAcB683ba69202c5ae6a3B9b9b191075295b1c41C</p> 
+        <br />
       </ul>
     ),
   },
