@@ -53,7 +53,7 @@ const Terms = () => {
   return (
     <div>
       <div className="h-20 bg-invar-dark grid place-content-center text-[#030F2B]">
-        <Link href="/">
+        <Link href="invaria2222">
           <img className='cursor-pointer w-[95px]' src='/logo_white.svg' />
         </Link>
       </div>

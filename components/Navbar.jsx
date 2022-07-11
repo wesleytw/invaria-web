@@ -5,6 +5,7 @@ import { shortenAddress } from '../src/utils/shortenAddress'
 import { useNetwork, useAddress, useMetamask, useWalletConnect, useDisconnect } from "@thirdweb-dev/react";
 import erc20ABI from '../src/utils/erc20ABI.json'
 import { fetchPrice } from '../src/utils/fetchPrice'
+import Link from 'next/link'
 
 const Navbar = ({ headerBackground }) => {
   const address = useAddress();
@@ -64,7 +65,9 @@ const Navbar = ({ headerBackground }) => {
         <div className="navbar w-full sticky top-0 left-0 right-0 bg-[#fff0] md:justify-center items-center h-[60px] md:h-[88px] flex">
           <div className="navbar-start"></div>
           <div className="navbar-center">
-            <img className="m-6 h-[2.5rem] w-24 xl:w-32" src='/logo_white.svg' />
+            <Link href='invaria2222'>
+              <img className="m-6 h-[2.5rem] w-24 xl:w-32 cursor-pointer" src='/logo_white.svg' />
+            </Link>
           </div>
           <div className="navbar-end md:hidden">
             {!toggleMenu &&
@@ -82,18 +85,18 @@ const Navbar = ({ headerBackground }) => {
                 Connect Wallet</label>
             ) : (
               <>
-                <label htmlFor="my-modal-4" className="btn btn-sm modal-button btn-outline rounded h-[40px] w-[130px] px-[11px] py-[1px] my-[12px] font-semibold text-sm text-white border-[#44334C] normal-case hover:border-none hover:bg-primary ">
+                {/* <label htmlFor="my-modal-4" className="btn btn-sm modal-button btn-outline rounded h-[40px] w-[130px] px-[11px] py-[1px] my-[12px] font-semibold text-sm text-white border-[#44334C] normal-case hover:border-none hover:bg-primary ">
                   Dashboard
-                </label>
+                </label> */}
                 <label htmlFor="my-modal-4" className="btn btn-sm modal-button btn-outline rounded h-[40px] w-[130px] px-[11px] py-[1px] m-[12px] font-semibold text-sm text-white border-[#44334C] normal-case hover:border-none hover:bg-primary ">
                   {shortenAddress(address)}
                 </label>
               </>
             )
             }
-            <button className="btn btn-sm btn-outline rounded h-[40px] w-[40px] my-[24px] mr-[24px] px-[4px] py-[4px] font-semibold text-sm text-white border-[#44334C] normal-case hover:border-none hover:bg-primary ">
+            {/* <button className="btn btn-sm btn-outline rounded h-[40px] w-[40px] my-[24px] mr-[24px] px-[4px] py-[4px] font-semibold text-sm text-white border-[#44334C] normal-case hover:border-none hover:bg-primary ">
               <img className="h-[20px] w-[20px]" src='/icons/ic_language.svg' alt="" />
-            </button>
+            </button> */}
           </div>
         </div>
       </nav>
