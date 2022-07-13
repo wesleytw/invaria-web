@@ -53,7 +53,7 @@ function App() {
             Build up communication channel… Discord
             set up… Twitter launched… Now we can communicate, discuss with each others about InVaria and the ideas we have there!
         </div>
-        <div className="w-[92px] m-6 flex justify-between absolute bottom-[0px] right-0 z-20">
+        <div className="m-6 flex justify-between absolute bottom-[0px] right-0 z-20">
           <Twitter />
           <Discord />
         </div>

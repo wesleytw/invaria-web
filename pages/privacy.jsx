@@ -1,6 +1,7 @@
 import { ButtonMailto } from '../components/icons/Link';
 import Image from 'next/image'
 import Link from 'next/link'
+import Footer from '../components/Footer'
 
 const Privacy = () => {
 
@@ -254,13 +255,14 @@ const Privacy = () => {
         <div className="md:col-span-3 hidden md:block fixed top-[117px] right-6 xl:right-40">
           <div className="bg-invar-dark px-6 pt-6 pb-3 rounded text-invar-light-grey">
             {titleList.map((item, index) => (
-              <div key={index} className="pb-3" id={item.id}>
-                <a href={`#${item.id}`}>{item.title}</a>
+              <div key={index} className="pb-3 " id={item.id}>
+                <a href={`#${item.id}`} className="pb-3 hover:underline">{item.title}</a>
               </div>
             ))}
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

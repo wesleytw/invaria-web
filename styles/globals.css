@@ -118,3 +118,25 @@ body, html {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+/* Hide Calendar Icon In Chrome */
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity:0;  
+    -webkit-appearance: none;
+}
+
+
+.errorMessage {
+  background-color: white;
+  width: 143px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 107px;
+  visibility: hidden;
+  border-radius: 10px;
+  position: relative;
+  float: left;
+  }

@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-
+import Footer from '../components/Footer'
 const Terms = () => {
 
   const titleList = [
@@ -59,10 +59,8 @@ const Terms = () => {
       </div>
       <div className="bg-gradient-to-b from-[#44334C] to-[#1E1722] py-8 px-6 xl:px-40 grid grid-cols-8 gap-12">
         <div className="container text-white col-span-8 md:col-span-5">
-          <p className="text-xl xl:text-2xl font-semibold">{`Terms & Conditions`}</p>
-          <br />
-          <p>Last Updated: June 20th, 2022</p>
-          <br />
+          <p className="text-xl xl:text-[32px] font-semibold">{`Terms & Conditions`}</p>
+          <p className="py-3">Last Updated: June 20th, 2022</p>
           <p>
             InVaria 2222 is a collection of digital artworks (NFTs) running on the Ethereum network.
             This website is only an interface allowing participants to purchase digital collectibles.
@@ -425,6 +423,7 @@ const Terms = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }
