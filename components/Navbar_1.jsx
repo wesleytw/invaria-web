@@ -53,17 +53,6 @@ const Navbar_1 = ({ headerBackground }) => {
     }
   }, [address, network]);
 
-  function openMenu() {
-    setToggleMenu(true)
-    disableScroll()
-  }
-
-  function closeMenu() {
-    setToggleMenu(false)
-    setToggleWallet(false)
-    enableScroll()
-  }
-
   return (
     <>
       <nav className={`fixed flex items-center justify-between w-full h-[3.75rem] bg-invar-dark md:h-[5rem] z-50
