@@ -124,7 +124,7 @@ const Form = () => {
           </div>
         </div>
         {!isAdult &&
-          <p class="mt-2 text-pink-600 text-sm">
+          <p className="mt-2 text-pink-600 text-sm">
             You are under the age of 21</p>
         }
       </label>
@@ -137,7 +137,7 @@ const Form = () => {
           required className="peer block bg-invar-main-purple w-full h-12 rounded focus:border border-white focus:outline-none
           text-white font-normal px-4 focus:px-[15px]"
         />
-        {emailChange && <p class="mt-2 hidden peer-invalid:flex text-pink-600 text-sm">
+        {emailChange && <p className="mt-2 hidden peer-invalid:flex text-pink-600 text-sm">
           Please provide a valid email address
         </p>}
       </label>
